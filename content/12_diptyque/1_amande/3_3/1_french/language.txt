@@ -1,0 +1,9 @@
+Title: French
+
+----
+
+Isdefaultlanguage: false
+
+----
+
+Uuid: p4unddn3nxj1pbtp

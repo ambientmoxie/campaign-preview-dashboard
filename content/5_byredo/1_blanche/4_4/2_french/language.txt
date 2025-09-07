@@ -1,0 +1,9 @@
+Title: French
+
+----
+
+Isdefaultlanguage: false
+
+----
+
+Uuid: 86ifxto2xr25a8ee

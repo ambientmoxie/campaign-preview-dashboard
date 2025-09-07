@@ -1,0 +1,19 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+
+  &__logo svg {
+    fill: var(--color-txt);
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .features {
+    text-transform: uppercase;
+  }
+}

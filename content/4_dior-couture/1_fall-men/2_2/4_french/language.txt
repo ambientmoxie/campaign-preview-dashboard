@@ -1,0 +1,9 @@
+Title: French
+
+----
+
+Isdefaultlanguage: false
+
+----
+
+Uuid: epcz3tft36iognus

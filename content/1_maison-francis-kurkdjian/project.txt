@@ -1,0 +1,21 @@
+Title: Maison Francis Kurkdjian
+
+----
+
+Showinportfolio: true
+
+----
+
+Indevelopment: true
+
+----
+
+Projectpassword: nI7j4rWmQadYBDNr
+
+----
+
+Created: 2025-08-19
+
+----
+
+Uuid: luaajvk5vvaa4ul3

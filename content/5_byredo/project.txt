@@ -1,0 +1,21 @@
+Title: Byredo
+
+----
+
+Showinportfolio: true
+
+----
+
+Indevelopment: false
+
+----
+
+Projectpassword: gIqeYANQ88ZORWgc
+
+----
+
+Created: 2025-08-07
+
+----
+
+Uuid: o6sxtdwywb0df7qq

@@ -1,0 +1,21 @@
+Title: Givenchy
+
+----
+
+Showinportfolio: true
+
+----
+
+Indevelopment: false
+
+----
+
+Projectpassword: 17QrBsccas9M4nS2
+
+----
+
+Created: 2025-08-19
+
+----
+
+Uuid: q9eaoyvorjygnyso

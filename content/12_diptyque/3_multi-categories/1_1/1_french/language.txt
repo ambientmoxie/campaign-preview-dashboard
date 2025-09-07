@@ -1,0 +1,9 @@
+Title: French
+
+----
+
+Isdefaultlanguage: false
+
+----
+
+Uuid: eg41qnznkl6so8os

@@ -1,0 +1,21 @@
+Title: APC
+
+----
+
+Showinportfolio: false
+
+----
+
+Indevelopment: false
+
+----
+
+Projectpassword: u7OoTscrCPGfPMJg
+
+----
+
+Created: 2025-08-07
+
+----
+
+Uuid: n0lsmpibapqwqxhd

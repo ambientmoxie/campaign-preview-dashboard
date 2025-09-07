@@ -1,0 +1,9 @@
+Title: Campaign 1
+
+----
+
+Isdefaultcampaign: false
+
+----
+
+Uuid: ozc5b5wfvmeqsly4

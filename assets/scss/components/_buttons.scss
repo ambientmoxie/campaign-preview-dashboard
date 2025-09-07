@@ -1,0 +1,15 @@
+.btn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  color: var(--color-bg);
+  background-color: var(--color-txt);
+  padding: var(--space-xs) var(--space-sm);
+
+  .icon {
+    fill: var(--color-bg);
+    &--settings {
+      stroke: var(--color-bg);
+    }
+  }
+}

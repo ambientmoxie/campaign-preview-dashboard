@@ -1,0 +1,9 @@
+Title: Multi-catégories
+
+----
+
+Isdefaultcampaign: false
+
+----
+
+Uuid: q5et3jilbtwpxeua

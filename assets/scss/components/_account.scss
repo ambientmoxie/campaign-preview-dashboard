@@ -1,0 +1,37 @@
+.account {
+  display: flex;
+  gap: var(--space-rg);
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+  }
+
+  &__data {
+    display: grid;
+    grid-template-columns: 16rem 1fr;
+    text-transform: uppercase;
+  }
+
+  &__label {
+    position: relative;
+
+    &::after {
+      content: ":";
+      position: absolute;
+      right: 0;
+      display: inline-block;
+      margin-right: var(--space-rg);
+    }
+  }
+
+  &__data--name .account__entry {
+    text-transform: capitalize;
+  }
+
+  &__redirect {
+    text-transform: uppercase;
+  }
+}

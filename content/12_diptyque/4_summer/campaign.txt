@@ -1,0 +1,9 @@
+Title: Summer
+
+----
+
+Isdefaultcampaign: false
+
+----
+
+Uuid: dzamyw6eqky4opbr

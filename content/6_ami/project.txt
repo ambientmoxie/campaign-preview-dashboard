@@ -1,0 +1,21 @@
+Title: Ami
+
+----
+
+Showinportfolio: true
+
+----
+
+Indevelopment: false
+
+----
+
+Projectpassword: HrKSRD8cnVtD0IFr
+
+----
+
+Created: 2025-08-07
+
+----
+
+Uuid: cgytbddtvkixc1up

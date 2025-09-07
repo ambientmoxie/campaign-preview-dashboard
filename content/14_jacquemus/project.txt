@@ -1,0 +1,21 @@
+Title: Jacquemus
+
+----
+
+Showinportfolio: true
+
+----
+
+Indevelopment: false
+
+----
+
+Projectpassword: NkDvP3XNGK1GVqXv
+
+----
+
+Created: 2025-08-19
+
+----
+
+Uuid: mtbqdnljcxiwkwnx

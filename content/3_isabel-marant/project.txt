@@ -1,0 +1,21 @@
+Title: Isabel Marant
+
+----
+
+Showinportfolio: false
+
+----
+
+Indevelopment: false
+
+----
+
+Projectpassword: tJrksS0wNao4FiaK
+
+----
+
+Created: 2025-08-19
+
+----
+
+Uuid: sfpq3izrqgv4wtxq

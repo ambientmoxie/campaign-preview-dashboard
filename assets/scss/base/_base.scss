@@ -1,0 +1,83 @@
+:root {
+  --gray-01: #fff;
+  --gray-02: #9a9a9a;
+  --gray-03: #676464;
+  --gray-04: #2d2f2e;
+  --gray-05: #000;
+
+  --color-blue: #000fa6;
+  --color-red: #d00020;
+
+  --font-family-base: "JetBrains Mono", monospace;
+  --font-size-rg: 1.3rem;
+  --font-size-md: 1.5rem;
+
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-rg: 2rem;
+  --space-md: 3rem;
+  --space-lg: 4rem;
+}
+
+html {
+  font-size: 62.5%;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  color: var(--color-txt);
+  font-size: var(--font-size-rg);
+  background-color: var(--color-bg);
+  font-family: var(--font-family-base);
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 400;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: var(--font-size-md);
+}
+
+h2 {
+  font-size: var(--font-size-rg);
+}
+
+h3 {
+  font-size: var(--font-size-rg);
+  text-transform: uppercase;
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: underline;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Scrollbar
+/* width */
+::-webkit-scrollbar {
+  width: 0;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--gray-0);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--gray-3);
+  border: 2px solid var(--gray-0);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gray-4);
+}

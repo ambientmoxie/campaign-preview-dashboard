@@ -1,0 +1,21 @@
+Title: Biologique Recherche
+
+----
+
+Showinportfolio: false
+
+----
+
+Indevelopment: false
+
+----
+
+Projectpassword: SplcgdOIt5XTHnCl
+
+----
+
+Created: 2025-08-19
+
+----
+
+Uuid: xdrnd7zkhqspvy8o

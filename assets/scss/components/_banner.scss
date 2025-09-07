@@ -1,0 +1,32 @@
+.banner {
+  &__wrapper {
+    position: relative;
+
+    iframe {
+      position: relative;
+      z-index: 2;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: calc(100% - 2px);
+      height: calc(100% - 2px);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 1px dashed var(--color-border-light);
+      z-index: 1;
+    }
+  }
+
+  &__footer {
+    margin-top: var(--space-xs);
+
+    p {
+      width: fit-content;
+      border: 1px dashed var(--color-border-light);
+      padding: var(--space-xs) calc(var(--space-xs) + 0.3rem);
+    }
+  }
+}

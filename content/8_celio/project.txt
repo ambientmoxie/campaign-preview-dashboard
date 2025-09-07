@@ -1,0 +1,21 @@
+Title: Celio
+
+----
+
+Showinportfolio: false
+
+----
+
+Indevelopment: false
+
+----
+
+Projectpassword: 238mIed2SUx1wnGK
+
+----
+
+Created: 2025-08-19
+
+----
+
+Uuid: odkebrlltgxhzjjt

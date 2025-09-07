@@ -1,0 +1,9 @@
+Title: Portugese
+
+----
+
+Isdefaultlanguage: false
+
+----
+
+Uuid: 4s061qmyvyebx01d

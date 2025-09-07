@@ -1,0 +1,21 @@
+Title: Dior Couture
+
+----
+
+Showinportfolio: false
+
+----
+
+Indevelopment: true
+
+----
+
+Projectpassword: u6tQMKalkLsFZcV6
+
+----
+
+Created: 2024-01-15
+
+----
+
+Uuid: h748yeityewrlbb6

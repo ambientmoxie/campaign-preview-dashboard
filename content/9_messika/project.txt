@@ -1,0 +1,21 @@
+Title: Messika
+
+----
+
+Showinportfolio: true
+
+----
+
+Indevelopment: false
+
+----
+
+Projectpassword: Kx9qEOC1kykdfUde
+
+----
+
+Created: 2025-08-19
+
+----
+
+Uuid: zlmxfydzjzavoupx

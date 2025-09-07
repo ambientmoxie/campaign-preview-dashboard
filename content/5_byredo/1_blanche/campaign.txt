@@ -1,0 +1,9 @@
+Title: Blanche
+
+----
+
+Isdefaultcampaign: false
+
+----
+
+Uuid: eyqiuyb4u36c2aao

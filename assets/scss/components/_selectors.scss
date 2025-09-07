@@ -1,0 +1,78 @@
+.selectors {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.custom-select {
+  cursor: pointer;
+  position: relative;
+
+  &__header {
+    position: relative;
+    color: var(--color-bg);
+    justify-content: space-between;
+    background-color: var(--color-txt);
+
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 2.8fr auto;
+  }
+
+  &__colon {
+    text-align: center;
+  }
+
+  &__caret svg {
+    fill: none;
+    stroke: var(--color-bg);
+    stroke-width: 1;
+  }
+
+  button {
+    width: 100%;
+    padding: calc(var(--space-sm) - 0.2rem) var(--space-sm);
+    text-align: left;
+  }
+
+  &__dropdown {
+    display: none;
+    overflow: hidden;
+    border: 1px dashed var(--color-border);
+    position: absolute;
+    top: var(--space-sm);
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+
+    .custom-select__option {
+        display: flex;
+        align-items: center;
+        gap: var(--space-sm);
+        background-color: var(--color-bg);
+
+      // Important:
+      // The span inside the button interferes with user clicks.
+      // By disabling pointer events on the span, we ensure the click action is not disrupted.
+      span {
+        pointer-events: none !important;
+      }
+
+      svg {
+        display: none;
+      }
+
+      &--selected svg {
+        display: block;
+      }
+
+      &:not(:last-of-type) {
+        border-bottom: 1px dashed var(--color-border);
+      }
+    }
+  }
+
+  &__icon svg {
+    fill: var(--color-txt);
+  }
+}

@@ -1,0 +1,41 @@
+// Light theme variables
+:root,
+body.theme-light {
+  --color-bg: var(--gray-01);
+  --color-txt: var(--gray-04);
+  --color-link: var(--color-blue);
+  --color-border: var(--color-txt);
+  --color-border-light: var(--gray-02);
+}
+
+// Dark theme variables
+body.theme-dark {
+  --color-bg: var(--gray-04);
+  --color-txt: var(--gray-01);
+  --color-link: var(--gray-02);
+  --color-border: var(--color-txt);
+  --color-border-light: var(--gray-02);
+}
+
+// Auto mode (system preference), only applies if no explicit theme class
+@media (prefers-color-scheme: light) {
+  :root:not(.theme-dark):not(.theme-light),
+  body:not(.theme-dark):not(.theme-light) {
+    --color-bg: var(--gray-01);
+    --color-txt: var(--gray-04);
+    --color-link: var(--color-blue);
+    --color-border: var(--color-txt);
+    --color-border-light: var(--gray-02);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not(.theme-dark):not(.theme-light),
+  body:not(.theme-dark):not(.theme-light) {
+    --color-bg: var(--gray-04);
+    --color-txt: var(--gray-01);
+    --color-link: var(--gray-02);
+    --color-border: var(--color-txt);
+    --color-border-light: var(--gray-02);
+  }
+}

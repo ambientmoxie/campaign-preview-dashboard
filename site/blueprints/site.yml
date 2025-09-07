@@ -1,0 +1,23 @@
+title: Site
+
+tabs:
+  production:
+    label: Production
+    sections:
+      listedProjects:
+        type: pages
+        headline: Accounts
+        template: project
+
+  wording:
+    label: Misc.
+    sections:
+      miscFields:
+        type: fields
+        fields:
+          adminPassword:
+            label: Admin Password
+            type: text
+            width: 1/1
+            required: true
+  

@@ -1,0 +1,21 @@
+Title: Diptyque
+
+----
+
+Showinportfolio: false
+
+----
+
+Indevelopment: false
+
+----
+
+Projectpassword: PBR2dG40wCnYLDym
+
+----
+
+Created: 2025-08-19
+
+----
+
+Uuid: 2zgswqzsrd9wivxg

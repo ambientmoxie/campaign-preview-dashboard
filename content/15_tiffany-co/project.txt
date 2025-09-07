@@ -1,0 +1,21 @@
+Title: Tiffany & Co
+
+----
+
+Showinportfolio: true
+
+----
+
+Indevelopment: false
+
+----
+
+Projectpassword: yyUADZD8XTCzQJYn
+
+----
+
+Created: 2025-08-19
+
+----
+
+Uuid: kphxf3jj2v3phuxi

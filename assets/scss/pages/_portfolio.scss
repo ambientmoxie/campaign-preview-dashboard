@@ -1,0 +1,44 @@
+.public {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-rg);
+}
+
+.public-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+
+  &__item .account {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr 1fr auto;
+    position: relative;
+    overflow: hidden;
+    &::before {
+      content: ".........................................................................................................................................................................................................................................................................................................................................................................................................................................................";
+      position: absolute;
+      bottom: 0;
+      letter-spacing: -0.25rem;
+      z-index: 1;
+    }
+
+    > * {
+      background-color: var(--color-bg);
+      z-index: 2;
+      width: fit-content;
+    }
+
+    &__name,
+    &__update {
+      padding: 0 var(--space-xs);
+    }
+
+    &__index {
+      padding-right: var(--space-xs);
+    }
+
+    &__redirect {
+      padding-left: var(--space-xs);
+    }
+  }
+}

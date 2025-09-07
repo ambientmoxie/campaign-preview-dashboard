@@ -1,0 +1,27 @@
+title: Language
+icon: megaphone
+image:
+  query: none
+  back: "#e6acd6"
+  color: "b4358b"
+
+columns:
+  - width: 2/3
+    sections:
+      upload:
+        type: files
+        headline: Upload ZIP Bundle
+        template: zip
+
+  - width: 1/3
+    fields:
+      isDefaultLanguage:
+        label: Select this language by default?
+        type: toggle
+        default: no
+        text:
+          - "No"
+          - "Yes"
+        options:
+          - no
+          - yes
