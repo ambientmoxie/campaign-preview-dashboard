@@ -27,7 +27,7 @@ project (brand)
 - **Draft/Unlisted detector** to keep everything publicly listed (required for selectors to traverse the tree).
 - **Session-based roles**: `pm`, `client`, `portfolio` + full Panel user bypass.
 
-## File map (high-level)
+## Important files
 ```
 site/
   config/
@@ -50,10 +50,13 @@ templates/
 ```
 
 ## Roles & access control
-- **Panel user (Kirby user):** Full access everywhere; bypasses session logic.
+- **Panel user (Kirby user):** Full access everywhere.
 - **PM (`role=pm` via login):** Full access, redirected to `/admin`.
 - **Client (`role=client` via login):** Access only to their project; stored in session as `projectAccess`.
-- **Portfolio visitor (`role=portfolio`):** Read-only access to projects flagged for portfolio; allowed slugs stored in session.
+- **Portfolio visitor (`role=portfolio`):** Read-only access to projects flagged for portfolio. Allowed slugs are stored in session.
+
+Access control and redirection logic are handled in **dedicated controller files** for each page.  
+For example, the logic for `login.php` is defined in `site/controllers/login.php`.
 
 ## Content model
 - Top-level `project` pages represent **brands**.
@@ -65,9 +68,9 @@ templates/
 
 ## Routes
 - **Bundle HTML**  
-  `GET /bundle/{brand}/{campaign}/{version}/{language}` → serves `{language}/bundle/index.html`
+  `GET /bundle-preview/{brand}/{campaign}/{version}/{language}` → serves `{language}/bundle/index.html`
 - **Bundle assets**  
-  `GET /bundle/{brand}/{campaign}/{version}/{language}/{path…}` → serves static file under `{language}/bundle/`
+  `GET /bundle-preview/{brand}/{campaign}/{version}/{language}/{path…}` → serves static file under `{language}/bundle/`
 - **Dashboard partials**  
   `GET /update-dashboard?defaults={...}` → returns JSON with:
   - `selectors`: HTML for the 3 dropdowns
@@ -86,12 +89,28 @@ templates/
 ## Helpers
 - **PanelBuilder** → creates selectors, ratio buttons, banners.
 - **AssetHelper** → reads Vite manifest to resolve asset URLs.
-- **ConfigHelper** → dev/host URL and debug toggles.
+- **ConfigHelper** → dev/host URL and debug toggles used in config.php.
 
 ## Troubleshooting
-- **ZIP uploaded but no preview:** Check write permissions, unzip success, index.html exists.
-- **Empty selectors:** Make sure parent pages are listed and defaults are set.
-- **404 assets:** Ensure bundle route matches asset paths.
+- **ZIP uploaded but no preview:** Check unzip success, index.html exists.
+- **Empty selectors:** Make sure parent pages are listed.
+- **404 assets:** Verify `<base>` tag is present in served index.html.
+
+## Add a project
+To create a new project, follow these steps:
+
+- **Log in** to the Kirby Panel.  
+- Click **“+ Add”** to create a new **project page**.  
+- Kirby will automatically generate the required base structure:  
+  - `campaign`  
+  - `version`  
+  - `language`  
+- Open the **language page**. It contains a **drop area** where you can upload your `bundle.zip`.  
+- Kirby will unzip the archive into a `/bundle` folder and serve the `index.html` and related assets.  
+
+⚠️ **Important:** Zip only the **files** (`index.html`, assets, scripts, etc.) — **do not zip the parent folder**.  
+
+Once uploaded, the dashboard selectors and preview grid will automatically update, giving project managers and clients instant access to the new banners.
 
 ## Security
 - Sessions enforce roles; panel users bypass.
