@@ -2,7 +2,7 @@
   --gray-01: #fff;
   --gray-02: #9a9a9a;
   --gray-03: #676464;
-  --gray-04: #2d2f2e;
+  --gray-04: #141514;
   --gray-05: #000;
 
   --color-blue: #000fa6;
@@ -30,12 +30,13 @@ body {
   font-size: var(--font-size-rg);
   background-color: var(--color-bg);
   font-family: var(--font-family-base);
+  font-weight: var(--font-weight);
 }
 
 h1,
 h2,
 h3 {
-  font-weight: 400;
+  font-weight: var(--font-weight);
 }
 
 h1 {

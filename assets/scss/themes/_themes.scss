@@ -6,6 +6,7 @@ body.theme-light {
   --color-link: var(--color-blue);
   --color-border: var(--color-txt);
   --color-border-light: var(--gray-02);
+  --font-weight: 600;
 }
 
 // Dark theme variables
@@ -15,6 +16,7 @@ body.theme-dark {
   --color-link: var(--gray-02);
   --color-border: var(--color-txt);
   --color-border-light: var(--gray-02);
+  --font-weight: 400;
 }
 
 // Auto mode (system preference), only applies if no explicit theme class
