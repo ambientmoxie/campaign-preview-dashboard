@@ -2,7 +2,7 @@ Title: Celio
 
 ----
 
-Showinportfolio: false
+Showinportfolio: true
 
 ----
 

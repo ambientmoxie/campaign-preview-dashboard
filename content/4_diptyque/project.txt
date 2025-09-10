@@ -2,7 +2,7 @@ Title: Diptyque
 
 ----
 
-Showinportfolio: false
+Showinportfolio: true
 
 ----
 

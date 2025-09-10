@@ -2,7 +2,7 @@ Title: Dior Couture
 
 ----
 
-Showinportfolio: false
+Showinportfolio: true
 
 ----
 
