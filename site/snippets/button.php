@@ -1,4 +1,4 @@
-<button class="btn btn--<?= $label ?>" type="<?= r($label === "submit", "submit", "button") ?>">
+<button class="btn btn--<?= str_replace(' ', '', $label) ?>" type="<?= r($label === "submit", "submit", "button") ?>">
     <div class="btn__label">
         <?= ucfirst($label) ?>
     </div>

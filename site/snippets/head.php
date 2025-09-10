@@ -28,10 +28,9 @@
         <link rel="stylesheet" href="<?= AssetHelper::hashedAssetURL("css") ?>">
         <script src="<?= AssetHelper::hashedAssetURL("js") ?>" type="module" defer></script>
     <?php endif; ?>
-
 </head>
 
-<body class="theme-dark">
+<body class="theme-light">
 
     <!-- Start of page wrapper -->
     <div id="<?= $page->intendedTemplate()->name() ?>" class="page page--<?= $page->intendedTemplate()->name() ?>">

@@ -13,40 +13,30 @@ if (!kirby()->user() && $session->get('role') !== 'pm') {
 ?>
 
 <?= snippet('head') ?>
-<?= snippet('header') ?>
 
-<section class="<?= strtolower($page->intendedTemplate()) ?>">
-    <div class="divider divider--<?= strtolower($page->intendedTemplate()) ?>">
-        <h2 class="divider__label"><?= ucfirst($page->intendedTemplate()) ?></h2>
-    </div>
+<?php
+// Collect all project pages
+$projects = site()->index()->filterBy('intendedTemplate', 'project');
+?>
 
-    <div class="accounts">
-        <h3 class="accounts__title">Overview of all projects currently available:</h3>
-
+<?php if ($projects->isEmpty()): ?>
+    <?= snippet('feedback') ?>
+<?php else: ?>
+    <ul class="account-list">
         <?php
-        // Collect all project pages
-        $projects = site()->index()->filterBy('intendedTemplate', 'project');
+        $i = 1;
+        foreach ($projects as $project):
         ?>
+            <li class="account-list__item">
+                <?= snippet("account", ["project" => $project, "i" => $i]) ?>
+            </li>
+        <?php
+            $i++;
+        endforeach;
+        ?>
+    </ul>
+<?php endif; ?>
 
-        <?php if ($projects->isEmpty()): ?>
-            <?= snippet('feedback-card') ?>
-        <?php else: ?>
-            <ul class="account-list">
-                <?php
-                $i = 1;
-                foreach ($projects as $project):
-                ?>
-                    <li class="account-list__item">
-                        <?= snippet("account", ["project" => $project, "i" => $i]) ?>
-                    </li>
-                <?php
-                    $i++;
-                endforeach;
-                ?>
-            </ul>
-        <?php endif; ?>
-    </div>
-</section>
 
-<?= snippet('footer') ?>
+<?= snippet('logout-btn') ?>
 <?= snippet('foot') ?>

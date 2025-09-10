@@ -1,6 +1,21 @@
-.account {
+.account-list {
   display: flex;
+  flex-direction: column;
   gap: var(--space-rg);
+  padding: var(--space-sm);
+}
+
+.account {
+  // display: flex;
+  // gap: var(--space-rg);
+
+  &__name {
+    font-size: var(--font-size-lg);
+  }
+
+  &__index {
+    font-family: var(--font-family-mono);
+  }
 
   &__list {
     margin: 0;
@@ -11,8 +26,12 @@
 
   &__data {
     display: grid;
-    grid-template-columns: 16rem 1fr;
+    grid-template-columns: 20rem 1fr;
     text-transform: uppercase;
+
+    > * {
+      font-size: var(--font-size-sm);
+    }
   }
 
   &__label {

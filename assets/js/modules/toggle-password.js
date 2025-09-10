@@ -7,11 +7,10 @@ class PasswordToggler {
     this.form = form;
     if (!this.form) return;
 
-    this.input    = this.form.querySelector(".form__input");
-    this.btn      = this.form.querySelector(".btn--toggle");
-    this.label    = this.btn.querySelector(".btn__label");
-    this.showIcon = this.btn.querySelector(".icon--show");
-    this.hideIcon = this.btn.querySelector(".icon--hide");
+    this.input = this.form.querySelector(".form__input");
+    this.btn = this.form.querySelector(".form__button--toggler");
+    this.showIcon = this.btn.querySelector(".icon--show") || null;
+    this.hideIcon = this.btn.querySelector(".icon--hide") || null;
 
     this.isVisible = config.isVisible ?? false;
 
@@ -22,29 +21,33 @@ class PasswordToggler {
     this.setDefaultState();
     this.btn.addEventListener("click", () => {
       this.togglePassword();
-    })
-  }
+    });
+  };
 
   setDefaultState = () => {
-    this.hideIcon.style.display = this.isVisible ? "block" : "none";
-    this.showIcon.style.display = this.isVisible ? "none" : "block";
-    this.input.type  = this.isVisible ? "text" : "password";
-    this.label.textContent = this.isVisible ? "Hide password" : "Show Password";
+    if (this.showIcon && this.hideIcon) {
+      this.hideIcon.style.display = this.isVisible ? "block" : "none";
+      this.showIcon.style.display = this.isVisible ? "none" : "block";
+    }
+
+    this.input.type = this.isVisible ? "text" : "password";
+    this.btn.textContent = this.isVisible ? "Hide password" : "Show Password";
   };
 
   togglePassword = () => {
     const isPassword = this.input.type === "password";
-    this.input.type  = isPassword ? "text" : "password";
+    this.input.type = isPassword ? "text" : "password";
 
-    this.showIcon.style.display = isPassword ? "none" : "inline";
-    this.hideIcon.style.display = isPassword ? "inline" : "none";
+    if (this.showIcon && this.hideIcon) {
+      this.showIcon.style.display = isPassword ? "none" : "inline";
+      this.hideIcon.style.display = isPassword ? "inline" : "none";
+    }
 
-    this.label.textContent = isPassword ? "Hide password" : "Show password";
-  }
+    this.btn.textContent = isPassword ? "Hide password" : "Show password";
+  };
 }
 
 export default function initPasswordToggler() {
   const form = document.querySelector("form");
-  new PasswordToggler(form, {isVisible : false});
+  new PasswordToggler(form, { isVisible: false });
 }
-

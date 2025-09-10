@@ -1,5 +1,11 @@
 export default function logout() {
-  document.querySelector(".btn--log.out").addEventListener("click", () => {
+  const logoutButton =
+    document.querySelector(".btn--logout") ||
+    document.querySelector(".logout");
+
+  if (!logoutButton) return;
+
+  logoutButton.addEventListener("click", () => {
     window.location.href = "/logout";
   });
 }

@@ -26,7 +26,8 @@
     p {
       width: fit-content;
       border: 1px dashed var(--color-border-light);
-      padding: var(--space-xs) calc(var(--space-xs) + 0.3rem);
+      padding: var(--space-xxs);
+      font-size: var(--font-size-xs);
     }
   }
 }

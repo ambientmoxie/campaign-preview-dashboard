@@ -1,12 +1,13 @@
 .selectors {
   display: flex;
   flex-direction: column;
-  gap: var(--space-sm);
+  gap: var(--space-xxs);
 }
 
 .custom-select {
   cursor: pointer;
   position: relative;
+  font-weight: 500;
 
   &__header {
     position: relative;
@@ -30,7 +31,7 @@
 
   button {
     width: 100%;
-    padding: calc(var(--space-sm) - 0.2rem) var(--space-sm);
+    padding: 0.5rem 1rem 0.7rem 1rem;
     text-align: left;
   }
 
@@ -44,12 +45,13 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
+    font-weight: 700;
 
     .custom-select__option {
-        display: flex;
-        align-items: center;
-        gap: var(--space-sm);
-        background-color: var(--color-bg);
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+      background-color: var(--color-bg);
 
       // Important:
       // The span inside the button interferes with user clicks.

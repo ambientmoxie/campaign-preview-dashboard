@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
     logout();
   }
 
-  if (pageId === "admin") {
+  if (pageId === "admin" || pageId === "portfolio") {
     logout();
   }
 });

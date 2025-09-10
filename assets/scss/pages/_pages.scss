@@ -1,7 +1,4 @@
-.page:not(.page--project) {
-    width: 100%;
-    max-width: 90rem;
-    margin: auto;
-    padding: var(--space-lg) var(--space-rg);
+.page {
+  margin: auto;
+  min-height: 100svh;
 }
-

@@ -8,15 +8,23 @@
   --color-blue: #000fa6;
   --color-red: #d00020;
 
-  --font-family-base: "JetBrains Mono", monospace;
-  --font-size-rg: 1.3rem;
-  --font-size-md: 1.5rem;
+  --font-family-sans: "Arial Grotesk", Arial, Helvetica, sans-serif;
+  --font-family-mono: "JetBrains Mono", monospace;
 
-  --space-xs: 0.5rem;
-  --space-sm: 1rem;
-  --space-rg: 2rem;
-  --space-md: 3rem;
-  --space-lg: 4rem;
+  --font-size-xs: 1.3rem;
+  --font-size-sm: 1.5rem;
+  --font-size-rg: 2rem;
+  --font-size-md: 3rem;
+  --font-size-lg: 4rem;
+  --font-size-xl: 7rem;
+
+  --space-xxs: 0.5rem;
+  --space-xs: 1rem;
+  --space-sm: 2rem;
+  --space-rg: 3rem;
+  --space-md: 5rem;
+  --space-lg: 10rem;
+
 }
 
 html {
@@ -29,33 +37,31 @@ body {
   color: var(--color-txt);
   font-size: var(--font-size-rg);
   background-color: var(--color-bg);
-  font-family: var(--font-family-base);
-  font-weight: var(--font-weight);
-}
-
-h1,
-h2,
-h3 {
+  font-family: var(--font-family-sans);
   font-weight: var(--font-weight);
 }
 
 h1 {
+
   text-transform: uppercase;
-  font-size: var(--font-size-md);
+  font-size: var(--font-size-xl);
 }
 
 h2 {
-  font-size: var(--font-size-rg);
+  font-size: var(--font-size-lg);
+  line-height: 1;
+  text-transform: uppercase;
 }
 
 h3 {
-  font-size: var(--font-size-rg);
+  font-size: var(--font-size-xs);
   text-transform: uppercase;
 }
 
 a {
   color: var(--color-link);
   text-decoration: underline;
+  width: fit-content;
   &:hover {
     text-decoration: underline;
   }

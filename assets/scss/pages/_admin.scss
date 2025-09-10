@@ -1,17 +1,10 @@
-.account-list {
-  margin-top: var(--space-rg);
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-md) var(--space-rg);
-}
-
-.account__data--password {
-  padding: var(--space-xs) 0;
-  align-items: center;
-}
-
-.account__data--password .account__entry {
-  padding: var(--space-xs) calc(var(--space-xs) + 0.3rem);
-  border: 1px dashed var(--color-border-light);
-  width: fit-content;
+.page--admin {
+  .feedback {
+    width: 100%;
+    height: 100svh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
 }

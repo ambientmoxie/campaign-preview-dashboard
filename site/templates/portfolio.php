@@ -10,43 +10,34 @@
 ?>
 
 <?= snippet("head") ?>
-<?= snippet("header") ?>
+<?php
+$projects = site()->index()
+    ->filterBy('intendedTemplate', 'project')
+    ->filterBy('showinportfolio', 'true');
+?>
 
-<section class="<?= strtolower($page->intendedTemplate()) ?>">
-    <div class="divider divider--<?= strtolower($page->intendedTemplate()) ?>">
-        <h2 class="divider__label"><?= ucfirst($page->intendedTemplate()) ?></h2>
-    </div>
+<h2>selected <br />
+    campaigns<br />
+    for public<br />
+    access</h2>
 
-    <div class="public">
-        <p class="public__requirement">This page presents a curated selection of projects that have been marked for public view.
-            Each project can be explored in detail through its dashboard, allowing visitors to preview
-            the campaign workflow and experience banners in context.</p>
-        <h3 class="public__title">Discover selected campaigns available for public access:</h3>
+<?php if ($projects->isEmpty()): ?>
+    <?= snippet("feedback") ?>
+<?php else: ?>
+    <ul class="public-list">
         <?php
-        $projects = site()->index()
-            ->filterBy('intendedTemplate', 'project')
-            ->filterBy('showinportfolio', 'true');
+        $i = 1;
+        foreach ($projects as $project):
         ?>
+            <li class="public-list__item">
+                <a href="<?= $project->url() ?>" class="account__redirect" target="_blank"><?= $project->title()->esc() ?></a>
+            </li>
+        <?php
+            $i++;
+        endforeach;
+        ?>
+    </ul>
+<?php endif; ?>
 
-        <?php if ($projects->isEmpty()): ?>
-            <?= snippet("feedback-card") ?>
-        <?php else: ?>
-            <ul class="public-list">
-                <?php
-                $i = 1;
-                foreach ($projects as $project):
-                ?>
-                    <li class="public-list__item">
-                        <?= snippet("account", ["project" => $project, "i" => $i]) ?>
-                    </li>
-                <?php
-                    $i++;
-                endforeach;
-                ?>
-            </ul>
-        <?php endif; ?>
-    </div>
-</section>
-
-<?= snippet("footer") ?>
+<?= snippet("logout-btn") ?>
 <?= snippet("foot") ?>

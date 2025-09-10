@@ -15,7 +15,15 @@
     <?= snippet('button', ['label' => "settings"]) ?>
     <aside id="panel">
 
-        <?= snippet("header") ?>
+        <header class="header">
+            <h1 class="header__title">banner(dot)hub</h1>
+            <ul class="features">
+                <li class="features__item">real-time previews</li>
+                <li class="features__item">structured workflow</li>
+                <li class="features__item">secure access</li>
+            </ul>
+            <p class="header__description">preview campaigns with filters and instant updates for a smooth, reliable collaboration.</p>
+        </header>
         <div class="controls">
             <div class="controls__item controls__item--filters">
                 <div class="divider divider--filters">

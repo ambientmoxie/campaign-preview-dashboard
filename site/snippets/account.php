@@ -1,17 +1,8 @@
 <div class="account">
-
-    <?php
-    if ($page->intendedTemplate()->name() === "admin"):
-    ?>
-
+    <h1 class="account__name"><?= $project->title()->esc() ?></h1>
+    <div class="account__data">
         <div class="account__index"><?= str_pad($i, 3, '0', STR_PAD_LEFT) ?></div>
         <ul class="account__list">
-            <!-- Account name -->
-            <li class="account__data account__data--name">
-                <span class="account__label">account</span>
-                <span class="account__entry"><?= $project->title()->esc() ?></span>
-            </li>
-
             <!-- Creation date -->
             <li class="account__data account__data--creation">
                 <span class="account__label">creation date</span>
@@ -59,19 +50,7 @@
             <!-- Redirect -->
             <li class="account__data account__data--redirect">
                 <span class="account__label">redirect</span>
-                <a href="<?= $project->url() ?>" class="account__entry">access dashboard</a>
+                <a href="<?= $project->url() ?>" class="account__entry" target="_blank">access dashboard</a>
             </li>
         </ul>
-    <?php
-    elseif ($page->intendedTemplate()->name() === "portfolio"):
-    ?>
-        <div class="account__index"><?= str_pad($i, 3, '0', STR_PAD_LEFT) ?></div>
-        <div class="account__name"><?= $project->title()->esc() ?></div>
-        <div class="account__update"><?= $project->created()->toDate('M d Y') ?></div>
-        <a href="<?= $project->url() ?>" class="account__redirect" target="_blank">access dashboard</a>
-    <?php
-    else:
-    ?>
-        <p>this component should not be on this page.</p>
-    <?php endif; ?>
-</div>
+    </div>

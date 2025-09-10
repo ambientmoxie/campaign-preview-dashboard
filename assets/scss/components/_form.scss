@@ -1,16 +1,30 @@
 .form {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: var(--space-sm);
-  max-width: 30rem; 
+  gap: var(--space-xs);
+
   &__input {
-    border: 1px solid var(--color-border);
-    padding: var(--space-sm);
+    width: inherit;
     min-height: 3.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: var(--font-size-md);
+
+    &::placeholder {
+      text-align: center;
+      color: var(--gray-02);
+      text-transform: uppercase;
+    }
   }
 
   &__buttons {
     display: flex;
-    gap: var(--space-sm);
+    flex-direction: column;
+
+    button {
+      text-transform: uppercase;
+      line-height: 1;
+    }
   }
 }

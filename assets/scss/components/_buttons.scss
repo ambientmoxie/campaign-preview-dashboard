@@ -1,15 +1,24 @@
 .btn {
   display: flex;
   align-items: center;
-  gap: var(--space-sm);
+  gap: var(--space-xs);
   color: var(--color-bg);
   background-color: var(--color-txt);
-  padding: var(--space-xs) var(--space-sm);
-
+  padding: 0.5rem 1rem 0.7rem 1rem;
+  font-weight: 500;
+  font-size: var(--font-size-xs);
   .icon {
     fill: var(--color-bg);
     &--settings {
       stroke: var(--color-bg);
     }
   }
+}
+
+.logout {
+  text-transform: uppercase;
+  font-size: var(--font-size-rg);
+  position: fixed;
+  right: var(--space-sm);
+  bottom: var(--space-sm);
 }

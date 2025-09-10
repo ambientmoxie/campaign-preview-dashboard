@@ -6,12 +6,13 @@
 // Components
 @use "components/form";
 @use "components/banner";
+@use "components/credits";
 @use "components/account";
 @use "components/buttons";
 @use "components/divider";
 @use "components/selectors";
 @use "components/ratio-manager";
-@use "components/feedback-card";
+@use "components/feedback";
 
 // Layout
 @use "layout/header";
