@@ -1,4 +1,4 @@
-# Banner Preview Dashboard (Kirby CMS)
+# Banner(dot)Hub
 
 ## Overview
 This repository contains a **Preview Platform** built on **Kirby CMS** (PHP).  
